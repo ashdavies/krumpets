@@ -1,0 +1,24 @@
+allprojects {
+  repositories {
+    google()
+    jcenter()
+  }
+}
+
+buildscript {
+  apply from: file('gradle/dependencies.gradle')
+
+  dependencies {
+    classpath 'com.android.tools.build:gradle:3.1.0-alpha08'
+    classpath "com.google.gms:google-services:$versions.google.services"
+    classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.kotlin"
+    classpath 'org.shipkit:shipkit:0.9.152'
+  }
+
+  repositories {
+    google()
+    jcenter()
+
+    maven { url 'https://plugins.gradle.org/m2/' }
+  }
+}

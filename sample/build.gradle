@@ -1,0 +1,35 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+  compileSdkVersion configuration.compileSdkVersion
+  buildToolsVersion configuration.buildToolsVersion
+
+  defaultConfig {
+    applicationId 'io.ashdavies.sample'
+
+    minSdkVersion configuration.minSdkVersion
+    targetSdkVersion configuration.targetSdkVersion
+
+    versionCode configuration.versionCode
+    versionName configuration.versionName
+  }
+
+  lintOptions {
+    disable 'GradleCompatible', 'UnusedResources'
+  }
+
+  sourceSets {
+    main.java.srcDirs += 'src/main/kotlin'
+    test.java.srcDirs += 'src/test/kotlin'
+  }
+}
+
+dependencies {
+  implementation project(':library')
+
+  implementation libraries.android.support.compat
+  implementation libraries.kotlin
+}

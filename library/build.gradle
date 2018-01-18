@@ -1,0 +1,31 @@
+apply plugin: 'com.android.library'
+apply plugin: 'org.shipkit.java'
+apply plugin: 'kotlin-android'
+
+android {
+  compileSdkVersion configuration.compileSdkVersion
+  buildToolsVersion configuration.buildToolsVersion
+
+  defaultConfig {
+    minSdkVersion configuration.minSdkVersion
+    targetSdkVersion configuration.targetSdkVersion
+
+    versionCode configuration.versionCode
+    versionName configuration.versionName
+  }
+
+  sourceSets {
+    main.java.srcDirs += 'src/main/kotlin'
+    test.java.srcDirs += 'src/test/kotlin'
+  }
+}
+
+dependencies {
+  implementation libraries.kotlin
+
+  testImplementation libraries.jUnit
+  testImplementation libraries.truth
+
+  testImplementation libraries.mockito.core
+  testImplementation libraries.mockito.kotlin
+}
