@@ -8,6 +8,9 @@
 #### Description
 `Krumpets` offers a set of British English aliases for Java and Kotlin API's
 
+This library is largely a parody of classes used in many common projects, and thus does not comply to the same level of modularisation.  
+Please do not make requests for splitting of artifacts or removal of dependencies.  
+
 #### Usage
 Import to your project with the following statement:
 

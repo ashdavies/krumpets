@@ -24,6 +24,7 @@ ext.versions = [
     ],
 
     kotlin     : '1.2.10',
+    rx         : '2.1.8',
 
     jUnit      : '4.12',
     truth      : '0.30',
@@ -45,6 +46,7 @@ ext.libraries = [
     ],
 
     kotlin     : "org.jetbrains.kotlin:kotlin-stdlib-jre8:$versions.kotlin",
+    rx         : "io.reactivex.rxjava2:rxjava:$versions.rx",
 
     jUnit      : "junit:junit:$versions.jUnit",
     truth      : "com.google.truth:truth:$versions.truth",
